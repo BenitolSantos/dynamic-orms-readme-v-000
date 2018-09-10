@@ -63,12 +63,10 @@ class Song
     DB[:conn].execute(sql)
   end
 
-  def some_class_method
-    self.class.some_class_method
-  end
-
   def table_name_for_insert
     self.class.table_name
   end
+
+  
 
 end
