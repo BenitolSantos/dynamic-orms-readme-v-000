@@ -2,7 +2,7 @@ require_relative "../config/environment.rb"
 require 'active_support/inflector'
 
 class Song
-  
+
   def self.table_name
     self.to_s.downcase.pluralize
   end
@@ -38,6 +38,7 @@ class Song
 
   def table_name_for_insert
     self.class.table_name
+    #uses table_name to get the table name.
   end
 
   def values_for_insert
