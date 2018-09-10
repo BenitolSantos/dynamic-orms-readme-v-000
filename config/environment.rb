@@ -14,3 +14,5 @@ SQL
 
 DB[:conn].execute(sql)
 DB[:conn].results_as_hash = true
+
+#Here we are doing a couple of things
