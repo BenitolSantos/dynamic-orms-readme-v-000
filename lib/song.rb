@@ -64,6 +64,7 @@ class Song
   end
 
   def some_class_method
+    self.class.some_class_method
   end
 
 end
