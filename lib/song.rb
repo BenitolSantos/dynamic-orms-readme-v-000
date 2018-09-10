@@ -63,4 +63,7 @@ class Song
     DB[:conn].execute(sql)
   end
 
+  def some_class_method
+  end
+
 end
