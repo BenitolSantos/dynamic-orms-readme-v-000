@@ -69,7 +69,8 @@ class Song
 
   def col_names_for_insert
     self.class.column_names.delete_if {|col| col == "id"}.join(", ")
-    #column_names 
+    #column_names grabs the column names
+    #we don't need id when inserting
   end
 
 
