@@ -67,4 +67,7 @@ class Song
     self.class.some_class_method
   end
 
+  def table_name_for_insert
+  end
+
 end
