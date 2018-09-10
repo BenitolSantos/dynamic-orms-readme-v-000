@@ -51,6 +51,7 @@ class Song
 
   def col_names_for_insert
     self.class.column_names.delete_if {|col| col == "id"}.join(", ")
+    #column_names is used and id's don't need to be added when inserting first.
   end
 
   def self.find_by_name(name)
