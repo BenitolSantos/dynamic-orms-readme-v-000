@@ -3,11 +3,6 @@ require 'active_support/inflector'
 
 class Song
 
-  def initialize(options={})
-    options.each do |property, value|
-      self.send("#{property}=", value)
-    end
-  end
 
   def self.table_name
     self.to_s.downcase.pluralize
@@ -62,16 +57,5 @@ class Song
     sql = "SELECT * FROM #{self.table_name} WHERE name = '#{name}'"
     DB[:conn].execute(sql)
   end
-
-  def table_name_for_insert
-    self.class.table_name
-  end
-
-  def col_names_for_insert
-    self.class.column_names.delete_if {|col| col == "id"}.join(", ")
-    #column_names grabs the column names
-    #we don't need id when inserting
-  end
-
 
 end
